@@ -2,13 +2,10 @@ package NineKeySpell.Method;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 /**
  * 递归方法
  */
 public class RecursionMethod {
-
     /**
      * 封装递归方法
      * @param dataList 多数组的数据源集合
@@ -16,16 +13,14 @@ public class RecursionMethod {
      * @param resultList 返回的排列结果集合
      * @return
      */
-
    public static List<String[]> makeupLetters(List<String[]> dataList, int index, List<String[]> resultList){
-
         if(index==dataList.size()){
             return resultList;
         }
         //结果集合的第一个集合
         List<String[]> resultList0 = new ArrayList<>();
-        if(index==0){//第一列数组默认有多少个字母就添加多少个排列数据
-            //取dataList的第一个数组
+        if(index==0){
+            //第一列数组默认有多少个字母就添加多少个排列数据
             String[] dataArr = dataList.get(0);
             //把第一个数组的元素添加到第一个集合resultList0中
             for(String s : dataArr){
@@ -55,8 +50,5 @@ public class RecursionMethod {
         }
         //每递归一次集合索引位置加1，直到遍历完最后一个数组才返回最终的排列结果集合
         return makeupLetters(dataList,++index,resultList0);
-
-
-
     }
 }

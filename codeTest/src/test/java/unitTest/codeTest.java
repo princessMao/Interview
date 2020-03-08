@@ -1,18 +1,11 @@
 package unitTest;
 
-
 import NineKeySpell.Entity.NumberMap;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import static NineKeySpell.Method.RecursionMethod.makeupLetters;
-
-/**
- * junit测试
- */
 
 /**
  * Bug:刚开始测试的时候不能输入
@@ -43,7 +36,6 @@ public class codeTest extends NumberMap {
         String[] arrString = numbers.split("");
         //创建一个集合来装数字映射的字母数组
         List<String[]> dataList = new ArrayList<>();
-
         for (int i = 0; i < arrString.length ; i++) {
             //遍历拼接arrString数组的数字元素
             arrInput.append(arrString[i]);
